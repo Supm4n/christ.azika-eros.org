@@ -15,10 +15,6 @@ class MyApp < Sinatra::Base
   	erb :index, :locals => {:index => true}
   end
 
-	get '/azika' do 
-		raise "ERROR"
- 	end 
-
   get '/:url' do
     postsIndex = nil
 		post = nil
@@ -67,7 +63,6 @@ class MyApp < Sinatra::Base
 		end
 	  return post	
 	end
-
 
 	not_found do 
     postsIndex = getPostsIndex

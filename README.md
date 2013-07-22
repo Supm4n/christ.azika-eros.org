@@ -1,6 +1,7 @@
 # My personal blog
 
-
+![The home page](https://github.com/Supm4n/christ.azika-eros.org/raw/master/public/up/christ-azika-eros-home.png)
+![The blog](https://github.com/Supm4n/christ.azika-eros.org/raw/master/public/up/christ-azika-eros-blog.png)
 
 # License
 
