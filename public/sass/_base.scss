@@ -1,0 +1,33 @@
+$baseColor: #dedeae;
+
+@font-face 
+{
+    font-family: Bembo;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Bembo.ttf') format("tff");
+}
+
+@font-face 
+{
+    font-family: New-Baskerville;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/New-Baskerville-BT.ttf') format("tff");
+}
+
+@font-face 
+{
+    font-family: Poiret-One;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Poiret-One.woff') format("woff");
+}
+
+@font-face 
+{
+    font-family: Open-sans;
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/Open-sans.woff') format("woff");
+}

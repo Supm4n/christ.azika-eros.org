@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+				<meta name="description" content="<% if defined? post %> <%= post[3] %> <% else %> Christ Azika-Eros is a french-congolese entrepreneur living in Paris studying at ESSEC Business School and Centrale Paris.<% end %>" />
+        <meta name="keywords" content="Entrepreneur, Christ Azika-Eros, ESSEC, Centrale Paris, Telecom Bretange, Cup of teach, Orange, IT, Telecommunications." />
+        <meta name="author" content="Christ Azika-Eros" />
+				<meta property="fb:app_id" content="309083042562572"/>
+        <title>Christ Azika-Eros - Entrepreneur-minded, student @ ESSEC Business School & Centrale Paris</title>
+        <link rel="canonical" href="http://christ.azika-eros.org" />
+		<link rel="stylesheet" href="/css/bootstrap.min.css">
+        <link rel="stylesheet" href="/css/tipTip.css" />
+        <link rel="stylesheet" href="/css/style.css" />
+    </head>
+    <body>
+
+	<div class="container">
+		    <header>
+		    	<h1 class="name">Christ Azika-Eros</h1> 
+		    	<% if defined? index %>
+		    		<a href="/blog" id="menu">Blog</a>
+		    	<% else %>
+		    		<a href="/" id="menu" title="About me">A propos</a>
+		    	<% end %>
+		    </header>
+
+		<%= yield %>
+
+	</div>
+	<script type="text/javascript">
+	 /*
+	  var _gaq = _gaq || [];
+	  _gaq.push(['_setAccount', 'UA-30934330-1']);
+	  _gaq.push(['_setDomainName', 'azika-eros.org']);
+	  _gaq.push(['_setAllowLinker', true]);
+	  _gaq.push(['_trackPageview']);
+
+	  (function() {
+	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+		*/
+	</script>
+	<script src="/js/jquery.min.js"></script>
+  <script src="/js/jquery.tipTip.minified.js"></script>
+	<!-- <script src="/js/angular.min.js"></script> 
+	<script src="/js/bootstrap.min.js"></script> -->
+	<script src="/js/app.js"></script>
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/fr_FR/all.js#xfbml=1&appId=309083042562572";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+	</body>
+</html>

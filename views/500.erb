@@ -1,0 +1,28 @@
+<div class="row" id="tablet-view">
+  <div class="span3" id="posts-section"> 
+		<ul class="posts">
+		  <% postsIndex.each do |post| %>
+		  <li class="post">
+				<a href="<%= post[2] %>"><img src="<%= post[3]%>" alt="<%= post[1]%>" title="<%= post[1] %>"></a>
+				<p><a href="<%= post[2] %>"><%= post[1]%></a></p>
+		  </li>
+	    <% end %>
+		</ul>
+  </div>
+	<div class="span9" id="post-container"> 
+		<p class="date">"L'erreur n'annule pas la valeur de l'effort accompli"</p>	
+		<hr align="center" class="title-line">
+		<p class="title">Le site web a rencontré un erreur...</p>	
+		<p class="content">
+				<span class="part-title">Profitez tout de même de la vidéo suivante</span>
+
+				<iframe class="youtube" width="560" height="315" src="//www.youtube.com/embed/A3PDXmYoF5U" frameborder="0" allowfullscreen></iframe>
+		</p>
+		<hr/>
+		<p class="signature">
+			 <img src="/img/christ-azika-eros.png" alt="Christ Azika-Eros's picture" width="75" height="75">
+			 Je suis Christ Azika-Eros, entrepreneur français-congolais vivant à Paris. J'ai travaillé en tant que business et product developer chez <a href="http://www.cupofteach.com" target="_blank">Cup of teach</a> et en tant qu'architecte logiciel chez  <a href="http://www.orange.com" target="_blank">Orange</a>. J'étudie actuellement au Mastère Spécialisé Centrale-ESSEC Entrepreneurs et suis diplomé de Telecom Bretagne en IT et télécommunications.
+		</p>
+		<a class="follow-on-twitter" target="_blank" href="http://twitter.com/supm4n"><img src="/img/christ-azika-eros-twitter.png" title="Suivez-moi sur twitter" alt="Suivez-moi sur twitter" width="30" height="30">Suivez-moi sur twitter</a>
+	</div>
+</div>
