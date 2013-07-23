@@ -8,7 +8,15 @@
         <meta name="keywords" content="Entrepreneur, Christ Azika-Eros, ESSEC, Centrale Paris, Telecom Bretange, Cup of teach, Orange, IT, Telecommunications." />
         <meta name="author" content="Christ Azika-Eros" />
 				<meta property="fb:app_id" content="309083042562572"/>
-				<title><% if defined? classicdescription %>Christ Azika-Eros - Entrepreneur-minded, student @ ESSEC Business School & Centrale Paris  <% else %><%= post[1] %> | Christ Azika-Eros<% end %> </title>
+				<% if defined? classicDescription %>
+					<meta property="og:title" content="Christ Azika-Eros - Entrepreneur-minded, student @ ESSEC Business School & Centrale Paris" />
+					<meta property="og:description" content="Christ Azika-Eros is a french-congolese entrepreneur living in Paris studying at ESSEC Business School and Centrale Paris" />
+				<% else %>
+					<meta property="og:title" content="<%= post[1] %> | Christ Azika-Eros" />
+					<meta property="og:description" content="<%= post[3] %>" />
+				<% end %>
+				<meta property="og:image" content="/img/christ-azika-eros.png" />
+				<title><% if defined? classicDescription %>Christ Azika-Eros - Entrepreneur-minded, student @ ESSEC Business School & Centrale Paris  <% else %><%= post[1] %> | Christ Azika-Eros<% end %> </title>
 				<link rel="shortcut icon" href="/favicon.ico">
         <link rel="canonical" href="http://christ.azika-eros.org" />
 		<link rel="stylesheet" href="/css/bootstrap.min.css">

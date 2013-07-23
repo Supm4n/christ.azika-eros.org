@@ -12,7 +12,7 @@ class MyApp < Sinatra::Base
 	set :environment, :production
 
   get '/' do
-  	erb :index, :locals => {:index => true, :classicdescription => true}
+  	erb :index, :locals => {:index => true, :classicDescription => true}
   end
 
   get '/:url' do
@@ -23,7 +23,7 @@ class MyApp < Sinatra::Base
 		if params[:url] == "blog" then
       postsIndex = getPostsIndex
 		  post = getPost postsIndex[0][2]
-			locals[:classicdescription] = true # used to not change the html description
+			locals[:classicDescription] = true # used to not change the html description
 		else
 		  if params[:url] =~ /[a-zA-Z0-9](-|[a-zA-Z0-9])*/ then
 		    post = getPost params[:url]
