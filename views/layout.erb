@@ -15,11 +15,13 @@
 					<meta property="og:title" content="<%= post[1] %> | Christ Azika-Eros" />
 					<meta property="og:description" content="<%= post[3] %>" />
 				<% end %>
-				<meta property="og:image" content="/img/christ-azika-eros.png" />
+				<meta property="og:image" content="http://christ.azika-eros.org/img/christ-azika-eros.png" />
 				<title><% if defined? classicDescription %>Christ Azika-Eros - Entrepreneur-minded, student @ ESSEC Business School & Centrale Paris  <% else %><%= post[1] %> | Christ Azika-Eros<% end %> </title>
 				<link rel="shortcut icon" href="/favicon.ico">
-        <link rel="canonical" href="http://christ.azika-eros.org" />
-		<link rel="stylesheet" href="/css/bootstrap.min.css">
+		    <% if defined? index %>
+        	<link rel="canonical" href="http://christ.azika-eros.org" />
+		    <% end %>
+		    <link rel="stylesheet" href="/css/bootstrap.min.css">
         <link rel="stylesheet" href="/css/tipTip.css" />
         <link rel="stylesheet" href="/css/style.css" />
     </head>
