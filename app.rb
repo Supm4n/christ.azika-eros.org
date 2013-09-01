@@ -55,7 +55,7 @@ class MyApp < Sinatra::Base
 		post = Array.new
 		begin
 			i = 0
-	    File.open('posts/' + title + '.txt', 'r').each_line do |line|
+	    File.open('posts/' + title + '.html', 'r').each_line do |line|
         if i < 5 then
           post << line
 		      i += 1	

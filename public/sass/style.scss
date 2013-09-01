@@ -181,6 +181,7 @@ a:hover {
 
 	.title {
 		font-size: 35px;
+		line-height:35px;
 		margin: 30px 20px 40px 20px;
 		text-align:center;
 	}
@@ -190,6 +191,10 @@ a:hover {
 		line-height:30px;
 		margin: 0px 20px 20px 20px;
 		text-align:justify;
+
+		.dotted {
+		 border-bottom: 1px dotted;	
+		}
 	}
 
   .part-title {
