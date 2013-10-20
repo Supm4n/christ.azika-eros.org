@@ -15,6 +15,11 @@ class MyApp < Sinatra::Base
   	erb :index, :locals => {:index => true, :classicDescription => true}
   end
 
+	get '/humans.txt' do
+		content_type 'text/plain'
+		erb :humans, :layout => false
+	end
+
 	get '/sitemap.xml' do
 		content_type 'text/xml'
 		erb :sitemap, :layout => false
