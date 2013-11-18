@@ -16,13 +16,29 @@
 		<p class="content">
 		  <%= post[4]%>
 		</p>
+		<ul class="share-buttons">
+		  <li>
+				<div class="fb-share-button" date-href="http://christ.azika-eros.org/<%= post[2] %>" data-type="button_count"></div>
+		  </li>
+		  <li>
+			<a href="https://twitter.com/share" class="twitter-share-button" data-url="christ.azika-eros.org/<%= post[2] %>" data-via="supm4n" data-lang="fr">Tweeter</a>
+		  </li>
+		</ul>
 		<hr/>
 		<p class="signature">
 			 <img src="/img/christ-azika-eros.png" alt="Christ Azika-Eros's picture" width="75" height="75">
 			 Je suis Christ Azika-Eros, entrepreneur français-congolais vivant à Paris. J'ai travaillé en tant que business et product developer chez <a href="http://www.cupofteach.com" target="_blank">Cup of teach</a> et en tant qu'architecte logiciel chez  <a href="http://www.orange.com" target="_blank">Orange</a>. J'étudie actuellement au Mastère Spécialisé Centrale-ESSEC Entrepreneurs et suis diplomé de Telecom Bretagne en IT et télécommunications. <br> <br>
 		</p>
-		<a class="follow-on-twitter" target="_blank" href="http://twitter.com/supm4n"><img src="/img/christ-azika-eros-twitter.png" title="Suivez-moi sur twitter" alt="Suivez-moi sur twitter" width="30" height="30">Suivez-moi sur twitter</a>
+
+		<ul class="follow-buttons">
+				<li>
+						<a href="https://twitter.com/supm4n" class="twitter-follow-button" data-show-count="false" data-lang="fr">Suivre Christ Azika-Eros</a>
+				</li>
+				<li> 
+						<div class="fb-follow" data-href="http://www.facebook.com/home.html5" data-width="400" data-height="65" data-colorscheme="light" data-layout="standard" data-show-faces="true"></div>
+				</li>
+		</ul>
 		<hr/>
-    <div class="fb-comments" data-href="http://christ.azika-eros.org" data-width="660" data-num-posts="10"></div>
+		<div class="fb-comments" data-href="http://christ.azika-eros.org/<%= post[2] %>" data-width="660" data-num-posts="10"></div>
 	</div>
 </div>

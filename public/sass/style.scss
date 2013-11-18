@@ -79,6 +79,10 @@ a:hover {
 		    margin-bottom:20px;
         padding: 0 20px 0 20px;
     }
+
+		.gplus {
+		 display:none;
+		}
 }
 
 #about img.picture {
@@ -215,7 +219,7 @@ a:hover {
 
 	.signature {
 		font-size: 16px;
-		height:80px;
+		height:90px;
 		line-height:22px;
 		margin: 0px 20px 20px 20px;
 		text-align:justify;
@@ -235,23 +239,30 @@ a:hover {
 		width:660px;
    }
 
-	.follow-on-twitter {
-		display:block;
-		font-size:20px;    
-		line-height:30px;
+	.share-buttons {
+		height:30px;
+		list-style-type:none;			
 		margin:auto;
-		margin-bottom:10px;
-		width:220px;
+		padding:0;
+		width:240px;
 
-    img {  
-			float:left;
-			margin-right:5px;
-    }
+		li {
+		  float:left;
+			width:120px;
+		}
   }
 
-	.follow-on-twitter:hover {
-	  color:black;
-	  background-color: transparent;	
-	  border-bottom:1px solid #dedede;
-	}
+	.follow-buttons {
+		height:65px;
+		list-style-type:none;			
+		margin:auto;
+		padding:0;
+		width:520px;
+
+		li {
+		  float:left;
+		}
+
+		li:first-child {margin-right:5px; }
+  }
 }
