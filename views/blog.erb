@@ -3,7 +3,7 @@
 		<ul class="posts">
 		  <% postsIndex.each do |post| %>
 		  <li class="post">
-				<a href="<%= post[2] %>"><img src="<%= post[3]%>" alt="<%= post[1]%>" title="<%= post[1] %>"></a>
+				<a href="/<%= post[2] %>"><img src="<%= post[3]%>" alt="<%= post[1]%>" title="<%= post[1] %>"></a>
 				<p><a href="/<%= post[2] %>"><%= post[1]%></a></p>
 		  </li>
 	    <% end %>
