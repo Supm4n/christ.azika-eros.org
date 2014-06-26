@@ -219,6 +219,22 @@ a:hover {
 	 margin:auto;
 	 text-align:center;
 	}
+  
+	.inline-image {
+		box-shadow: 0 0 20px #dedede;
+		margin-top:20px;
+	}
+
+	.caption {
+		display:block;
+		font-family:Raleway;
+		font-size:15px;
+		text-align:center;
+	}
+
+	.highlight {
+		text-decoration:underline;
+	}
 
 	.signature {
 		font-size: 16px;
