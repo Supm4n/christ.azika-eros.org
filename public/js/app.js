@@ -4,8 +4,6 @@ $(document).ready(function(){
 
 	var postsSectionPosition = $('#posts-section').offset().top;
 
-  alert($(window).width());
-
 	$(window).scroll(function() {
 
 			if($(window).width() > 960)
