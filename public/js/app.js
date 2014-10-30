@@ -4,11 +4,15 @@ $(document).ready(function(){
 
 	var postsSectionPosition = $('#posts-section').offset().top;
 
+  alert($(window).width());
+
 	$(window).scroll(function() {
-		  if($(window).scrollTop() > postsSectionPosition - 10) 
-			  $('.posts').addClass('fixed');
-			 else 
-			  $('.posts').removeClass('fixed');
-		});
+
+			if($(window).width() > 960)
+		    if($(window).scrollTop() > postsSectionPosition - 10) 
+			    $('.posts').addClass('fixed');
+			   else 
+			    $('.posts').removeClass('fixed');
+		    });
 });
 
