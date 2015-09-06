@@ -1,13 +1,15 @@
 <div class="row" id="tablet-view">
   <div class="span3" id="posts-section"> 
-		<ul class="posts">
-		  <% postsIndex.each do |post| %>
-		  <li class="post">
-				<a href="/<%= post[2] %>"><img src="<%= post[3]%>" alt="<%= post[1]%>" title="<%= post[1] %>"></a>
-				<p><a href="/<%= post[2] %>"><%= post[1]%></a></p>
-		  </li>
-	    <% end %>
-		</ul>
+		<div class="posts-wrapper">
+		  <ul class="posts">
+		    <% postsIndex.each do |post| %>
+		    <li class="post">
+		  		<a href="/<%= post[2] %>"><img src="<%= post[3]%>" alt="<%= post[1]%>" title="<%= post[1] %>"></a>
+		  		<p><a href="/<%= post[2] %>"><%= post[1]%></a></p>
+		    </li>
+	      <% end %>
+		  </ul>
+    </div>
   </div>
 	<div class="span9" id="post-container"> 
 		<p class="date"><%= post[0]%></p>	
@@ -27,7 +29,7 @@
 		<hr/>
 		<p class="signature">
 			 <img src="img/christ-azika-eros.png" alt="Christ Azika-Eros's picture" width="75" height="75">
-			 Je suis Christ Azika-Eros, entrepreneur français-congolais, chef de produits chez <a href="http://www.orange.com" target="_blank">Orange</a>. J'étais récemment en charge du logiciel de la startup <a href="http://www.instabeat.me" target="_blank">Instabeat</a> et j'ai également travaillé chez <a href="http://www.cupofteach.com" target="_blank">Cup of teach</a>. J'ai terminé mes études au sein du Mastère Spécialisé Centrale-ESSEC Entrepreneurs et suis diplomé de Telecom Bretagne en IT et Télécommunications. <br> <br>
+			 Je suis Christ Azika-Eros, entrepreneur français-congolais, marketing manager à Airtel Congo. J'étais récemment en charge du logiciel de la startup <a href="http://www.instabeat.me" target="_blank">Instabeat</a> et j'ai également travaillé chez <a href="http://www.cupofteach.com" target="_blank">Cup of teach</a>. J'ai terminé mes études au sein du Mastère Spécialisé Centrale-ESSEC Entrepreneurs et suis diplomé de Telecom Bretagne en IT et Télécommunications. <br> <br>
 		</p>
 
 		<ul class="follow-buttons">

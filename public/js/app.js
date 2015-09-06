@@ -8,9 +8,9 @@ $(document).ready(function(){
 
 			if($(window).width() > 960)
 		    if($(window).scrollTop() > postsSectionPosition - 10) 
-			    $('.posts').addClass('fixed');
+			    $('.posts-wrapper').addClass('fixed');
 			   else 
-			    $('.posts').removeClass('fixed');
+			    $('.posts-wrapper').removeClass('fixed');
 		    });
 });
 
