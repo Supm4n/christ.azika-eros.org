@@ -52,37 +52,40 @@ a:hover {
   margin: 10px auto 0 auto;
 	text-align:center;
 	text-decoration:none;
+	transition: 0.3s;
   width:100px;
 }
 
 #menu:hover {
     background: rgba(255, 255, 255, 0.8);
+		box-shadow: 0 0 5px rgba(0,0,0,0.1);
+		transition : 0.3s;
 }
 
 #menu:active {
     background: rgba(255, 255, 255, 0.7);
 }
 
-
 #about {
     background: rgba(255, 255, 255, 0.9)    ;
+		box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
     font-size:20px;
-    height: 350px;
-		margin: 100px auto 0 auto;
+    height: 255px;
+		left:50%;
+		margin:-128px 0 0 -250px;
+		opacity:0;
+		position:fixed;
+		top:50%;
     width:500px;
 
     p {
         color : rgba(0, 0, 0, 1);
         line-height: 27px;
-        text-align: justify;
-        margin-top: 5px;
+        text-align: center;
+        margin-top: 10px;
 		    margin-bottom:20px;
         padding: 0 20px 0 20px;
     }
-
-		.gplus {
-		 display:none;
-		}
 }
 
 #about img.picture {
@@ -90,10 +93,12 @@ a:hover {
 }
 
 #contact-box {
-		height:50px;
+		height:30px;
     list-style-type: none; 
-		margin:0;
-    padding: 20px 0 0 20px;
+		margin:0 auto;
+    padding: 0 0 0 0;
+		text-align:center;
+		width:340px;
 }
 
 #contact-box li {
@@ -136,6 +141,7 @@ a:hover {
 	  		color:white;
 	  	  height: 180px;	
 	  		margin-bottom: 20px;
+				transition: 0.3s;
 
 	  		a {
 	  		  border-bottom: none;
@@ -162,7 +168,8 @@ a:hover {
 	  	}
 
 	  	.post:hover {
-	  	  box-shadow : 0 0 15px #444;
+	  	  box-shadow : 0 0 20px rgba(0,0,0,1);
+				transition:0.2s;
 	  	}
 	  }
   }

@@ -1,8 +1,23 @@
 $(document).ready(function(){
 
+  var postsSectionPosition;
+
 	$('.help').tipTip();
 
-	var postsSectionPosition = $('#posts-section').offset().top;
+
+	$('#about').velocity('transition.slideDownIn');
+
+	$('#contact-box li').mouseenter(function(){
+		$(this).velocity({marginTop : "-5"}, {duration: 100});
+	})
+
+	$('#contact-box li').mouseleave(function(){
+		$(this).velocity({marginTop : "0"}, {duration: 100});
+	})
+
+	$('#post-container').velocity('transition.slideUpIn');
+
+  postsSectionPosition = $('#posts-section').offset().top;
 
 	$(window).scroll(function() {
 
@@ -11,6 +26,6 @@ $(document).ready(function(){
 			    $('.posts-wrapper').addClass('fixed');
 			   else 
 			    $('.posts-wrapper').removeClass('fixed');
-		    });
+  });
 });
 
