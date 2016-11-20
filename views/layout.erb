@@ -26,21 +26,23 @@
         <link rel="stylesheet" href="css/tipTip.css" />
         <link rel="stylesheet" href="css/style.css" />
     </head>
-    <body>
+    <body >
 
-	<div class="container">
-		    <header>
-		    	<h1 class="name">Christ Azika-Eros</h1> 
-		    	<% if defined? index %>
-		    		<a href="/blog" id="menu">Blog</a>
-		    	<% else %>
-		    		<a href="/" id="menu" title="About me">A propos</a>
-		    	<% end %>
-		    </header>
+		<div class="particles-container" <% if defined? index %> id="particles-js" <% end %> >
+		    <div class="container" >
+						<header <% if defined? index %> class="header-homepage"<% end %> >
+		        	<h1 class="name">Christ Azika-Eros</h1> 
+		        	<% if defined? index %>
+		        		<a href="/blog" id="menu">Blog</a>
+		        	<% else %>
+		        		<a href="/" id="menu" title="About me">A propos</a>
+		        	<% end %>
+		        </header>
 
-		<%= yield %>
+		        <%= yield %>
+	      </div>
+     </div>
 
-	</div>
 	<script type="text/javascript">
 	  var _gaq = _gaq || [];
 	  _gaq.push(['_setAccount', 'UA-30934330-1']);
@@ -58,6 +60,7 @@
   <script src="/js/velocity.min.js"></script>
   <script src="/js/velocity.ui.min.js"></script>
   <script src="/js/jquery.tipTip.minified.js"></script>
+  <script src="/js/particles.min.js"></script>
 	<script src="/js/app.js"></script>
 	<div id="fb-root"></div>
 	<script>(function(d, s, id) {

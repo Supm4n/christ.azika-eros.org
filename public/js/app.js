@@ -4,7 +4,6 @@ $(document).ready(function(){
 
 	$('.help').tipTip();
 
-
 	$('#about').velocity('transition.slideDownIn');
 
 	$('#contact-box li').mouseenter(function(){
@@ -17,7 +16,8 @@ $(document).ready(function(){
 
 	$('#post-container').velocity('transition.slideUpIn');
 
-  postsSectionPosition = $('#posts-section').offset().top;
+	if(typeof page_name != 'undefined')
+		postsSectionPosition = $('#posts-section').offset().top;
 
 	$(window).scroll(function() {
 
@@ -27,5 +27,59 @@ $(document).ready(function(){
 			   else 
 			    $('.posts-wrapper').removeClass('fixed');
   });
+
+	var particlesConfig = {
+			  "particles": {
+				    "number": {
+						      "value": 200
+						    },
+						"size":{
+								"value" : 2
+						},
+				    "shape": {
+						      "type": "circle"
+						},
+						"color": {
+						      "value": "#000000"
+						    },
+				     "line_linked": {
+								  "color": "#000000",
+				          "enable": true,
+									"opacity" : 0.4
+				       },
+						 "move" :{
+								  "speed" : 3,
+									"bounce" : true
+						 },
+						"interactivity": {
+								"detect_on":"window",
+								"events": {
+								      "onhover": {
+											        "enable": true,
+											        "mode": "grab"
+											      },
+								      "onclick": {
+											        "enable": true,
+											        "mode": "push"
+											      },
+								      "resize": true
+								    },
+						    "modes": {
+								      "grab": {
+											        "distance": 1000,
+											        "line_linked": {
+															          "opacity": 1
+															        }
+											      },
+								      "push": {
+											        "particles_nb": 5
+											      },
+								    }
+						  },
+						  "retina_detect": true
+				}};
+
+  particlesJS("particles-js", particlesConfig);
+
 });
 

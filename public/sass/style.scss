@@ -1,5 +1,9 @@
 @import "base";
 
+html {
+		height:100%;
+}
+
 body {
     background: url(../img/sahara.jpg) no-repeat center center fixed; 
     font-family: Bembo; 
@@ -7,6 +11,7 @@ body {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+		height:100%;
     margin: 0;
     padding:0;
 }
@@ -30,17 +35,35 @@ a:hover {
   text-decoration:none;
 }
 
+.particles-js-canvas-el{
+  position:absolute;
+	top : 0;
+	z-index:1;
+}
+
+.particles-container {
+	height:100%;
+  width:100%;
+}
+
 .container {
-		padding: 10px;
+		min-height:100%;
+}
+
+.header-homepage {
+		margin-left:260px;
+		position:fixed;
+	  z-index:2;
 }
 
 .name {
     border-bottom: 1px solid black;
     font-size: 35px;
     margin: auto;
-    padding: 0 0 5px 0;
+    padding: 10px 0 5px 0;
     text-align: center;
     width:400px;
+		z-index:5;
 }
 
 #menu {	
@@ -81,6 +104,7 @@ a:hover {
 		position:fixed;
 		top:50%;
     width:500px;
+	  z-index:2;
 
     p {
         color : rgba(0, 0, 0, 1);
