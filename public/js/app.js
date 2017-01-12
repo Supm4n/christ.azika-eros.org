@@ -16,7 +16,7 @@ $(document).ready(function(){
 
 	$('#post-container').velocity('transition.slideUpIn');
 
-	if(typeof page_name != 'undefined')
+	if($("#posts-section").length)
 		postsSectionPosition = $('#posts-section').offset().top;
 
 	$(window).scroll(function() {
@@ -79,7 +79,8 @@ $(document).ready(function(){
 						  "retina_detect": true
 				}};
 
-  particlesJS("particles-js", particlesConfig);
+	if($("#particles-js").length)
+		particlesJS("particles-js", particlesConfig);
 
 });
 
