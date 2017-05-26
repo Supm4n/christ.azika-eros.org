@@ -275,6 +275,17 @@ a:hover {
 		text-align:center;
 	}
 
+	.center {
+		display:block;
+		margin: 0 auto;
+		text-align:center;
+	}
+
+	.button {
+		border:1px solid black;
+		text-decoration:none;
+	}
+
 	.highlight {
 		text-decoration:underline;
 	}
