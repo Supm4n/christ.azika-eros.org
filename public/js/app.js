@@ -82,5 +82,33 @@ $(document).ready(function(){
 	if($("#particles-js").length)
 		particlesJS("particles-js", particlesConfig);
 
+	$("#christForm").on("submit", function(e){
+			e.preventDefault();
+			pushEmail($("#email").prop("value"));
+	});
+
 });
 
+
+function pushEmail(email) {
+		
+
+										$.post({
+														url: "https://bouger.us8.list-manage.com/subscribe/post-json?u=eae7f8d4e1c20125d910a2549&id=bd0d912089&c=?",
+														data : $.param({EMAIL : email}),
+														cache:false,
+														dataType: 'json',
+														contentType: 'application/json; charset=utf-8',
+														error : function(data){
+																		$.growl.error({title: "Christ AZIKA-EROS",  message: "Veillez saisir une adresse email correcte ou reesayez plus tard." });
+																		},
+														success : function(data) {
+																		if(data.result === "success") 
+																				$.growl.notice({title: "Christ AZIKA-EROS",  message: "Vous adresse email a bien été ajouté. A très bientôt.", duration : 5000});
+																		else 
+																				$.growl.error({title: "Christ AZIKA-EROS",  message: "Veillez saisir une adresse email correcte ou reesayez plus tard." });
+																		}
+										});
+
+
+}

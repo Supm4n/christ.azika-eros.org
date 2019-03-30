@@ -97,7 +97,7 @@ a:hover {
     background: rgba(255, 255, 255, 0.9)    ;
 		box-shadow: 0 0 50px rgba(0, 0, 0, 0.2);
     font-size:20px;
-    height: 255px;
+    height: 385px;
 		left:50%;
 		margin:-128px 0 0 -250px;
 		opacity:0;
@@ -123,15 +123,15 @@ a:hover {
 #contact-box {
 		height:30px;
     list-style-type: none; 
-		margin:0 auto;
+		margin:15px auto 0 auto;
     padding: 0 0 0 0;
 		text-align:center;
-		width:340px;
+		width:450px;
 }
 
 #contact-box li {
     float:left;
-    margin-right:40px;
+    margin-left:47px;
 }
 
 #contact-box li:last-child {
@@ -145,6 +145,30 @@ a:hover {
 
 #contact-box li a:hover, #contact-box li a:active {
 	background:none;
+}
+
+#christForm {
+		margin:auto;
+		width:360px;
+
+		.email-input {
+				height:23px;
+				width:240px;
+		}
+}
+
+#subscribe {
+		background:linear-gradient($mainColor,darken($mainColor,20%));
+		border-radius:8px;
+		border:none;
+		box-shadow:0 0 10px rgba(0,0,0,0.5);
+		margin-bottom:8px;
+		width:100px;
+		height: 30px;
+}
+
+#subscribe:hover {
+		background:linear-gradient(lighten($mainColor, 10%),darken($mainColor,20%));
 }
 
 #tablet-view 
