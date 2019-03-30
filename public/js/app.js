@@ -84,6 +84,7 @@ $(document).ready(function(){
 
 	$("#christForm").on("submit", function(e){
 			e.preventDefault();
+			$("#email").prop('disabled', true);
 			pushEmail($("#email").prop("value"));
 	});
 
@@ -91,24 +92,51 @@ $(document).ready(function(){
 
 
 function pushEmail(email) {
-		
 
-										$.post({
-														url: "https://bouger.us8.list-manage.com/subscribe/post-json?u=eae7f8d4e1c20125d910a2549&id=bd0d912089&c=?",
-														data : $.param({EMAIL : email}),
-														cache:false,
-														dataType: 'json',
-														contentType: 'application/json; charset=utf-8',
-														error : function(data){
-																		$.growl.error({title: "Christ AZIKA-EROS",  message: "Veillez saisir une adresse email correcte ou reesayez plus tard." });
-																		},
-														success : function(data) {
-																		if(data.result === "success") 
-																				$.growl.notice({title: "Christ AZIKA-EROS",  message: "Vous adresse email a bien été ajouté. A très bientôt.", duration : 5000});
-																		else 
-																				$.growl.error({title: "Christ AZIKA-EROS",  message: "Veillez saisir une adresse email correcte ou reesayez plus tard." });
-																		}
-										});
+		$.post({
+						url: "https://bouger.us8.list-manage.com/subscribe/post-json?u=eae7f8d4e1c20125d910a2549&id=bd0d912089&c=?",
+						data : $.param({EMAIL : email}),
+						cache:false,
+						dataType: 'json',
+						contentType: 'application/json; charset=utf-8',
+						error : function(data){
+										$("#email").prop('disabled', false);
+
+										$("#email").val("Error. Try again later !");	
+
+										setTimeout(function(){ 
+												$("#email").val(email); 
+										}, 3000);
+								},
+						success : function(data) {
+
+										if(data.result === "success") {
+														console.log(data);
+
+														$("#email").prop('disabled', false);
+
+														$("#email").val("Registered ! See You soon.");	
+
+														setTimeout(function(){ 
+																$("#email").val(email); 
+														}, 3000);
+										}
+										else {
+														console.log(data);
+
+														$("#email").prop('disabled', false);
+
+														if(data.msg.search(('alreay subscribed') != -1) || (data.msg.search('many') != 1))
+																$("#email").val("Already registered !");	
+														else
+																$("#email").val("Error. Try again later !");	
+
+														setTimeout(function(){ 
+																$("#email").val(email); 
+														}, 3000);
+										}
+								}
+						});
 
 
 }
